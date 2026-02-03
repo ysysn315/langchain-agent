@@ -15,6 +15,7 @@ dependencies:
       - python-dotenv>=1.0
       - langchain
       - langchain-community
+      - langchain-milvus
       - langgraph
       - pymilvus>=2.4
       - dashscope
