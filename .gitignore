@@ -4,6 +4,7 @@ __pycache__/
 *.pyd
 .Python
 .venv/
+uploads/
 .env
 .env.*
 .DS_Store
