@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+.env
+.env.*
+.DS_Store
+.mamba*
+.micromamba*

@@ -1,7 +1,5 @@
 # langchain-agent
 
-该 README 由项目内 PDF 文档自动提取并转换为 Markdown：`PYTHON_REFACTOR_ARCHITECTURE.pdf`。
-
 ## SuperBizAgent（Python 重构版）技术栈与架构规划
 ## 0. 目标与范围
 
@@ -355,6 +353,31 @@ OAuth2 + JWT（FastAPI 官方示例即可）
 
 说明：以下优先给“官方中文”；若官方无中文，给高质量中文社区/翻译站点，并标注“非官方”。
 
+### 9.0. 主要技术栈与官方入口（建议先看）
+
+Web/API 层（对齐 Spring MVC）：
+
+- FastAPI（官方）：https://fastapi.tiangolo.com/
+- FastAPI Release Notes（官方）：https://fastapi.tiangolo.com/release-notes/
+- FastAPI 中文入口（非官方/镜像）：https://fastapi.org.cn/
+- Pydantic（官方）：https://docs.pydantic.dev/latest/
+
+Agent/工作流层（对齐 SpringAI Agent + Tool 编排）：
+
+- LangChain（官方）：https://docs.langchain.com/oss/python/langchain/overview
+- LangChain v1 Release Notes（官方）：https://docs.langchain.com/oss/python/releases/langchain-v1
+- LangGraph（官方）：https://docs.langchain.com/oss/python/langgraph/overview
+- LangGraph v1 Release Notes（官方）：https://docs.langchain.com/oss/python/releases/langgraph-v1
+- LangGraph Releases（精确对齐版本）：https://github.com/langchain-ai/langgraph/releases
+
+### 9.0.1. Lang 系列版本对齐策略（避免教程过时）
+
+LangChain/LangGraph 迭代较快，建议以“当前环境版本”为准：
+
+1. 先确认环境已安装版本（例如 `pip show langchain langgraph`）。
+2. 优先阅读官方 release notes（LangChain v1 / LangGraph v1）。
+3. 教程代码跑不通时，先查对应版本的 GitHub Releases/Changelog，判断是否 API 改名或弃用，再决定升级或按旧接口实现。
+
 ### 9.1. Milvus / PyMilvus
 
 Milvus 官方文档（含中文入口）：https://milvus.io/docs/zh/
@@ -369,11 +392,11 @@ Milvus 中文文档仓库（非官方/社区）：https://github.com/aidoczh/mil
 
 ### 9.2. DashScope（通义千问/Qwen）
 
-Qwen API Reference（官方中文）：https://help.aliyun.com/zh/model-studio/qwen-api-refere nce/
+Qwen API Reference（官方中文）：https://help.aliyun.com/zh/model-studio/qwen-api-reference/
 
-第一次调用 Qwen API（官方中文）：https://help.aliyun.com/zh/model-studio/first-api-call-toqwen
+第一次调用 Qwen API（官方中文）：https://help.aliyun.com/zh/model-studio/first-api-call-to-qwen
 
-Function Calling（官方中文）：https://help.aliyun.com/zh/model-studio/qwen-function-callin g
+Function Calling（官方中文）：https://help.aliyun.com/zh/model-studio/qwen-function-calling
 
 向量化 Embedding（官方中文）：https://help.aliyun.com/zh/model-studio/embedding
 
@@ -381,7 +404,7 @@ Function Calling（官方中文）：https://help.aliyun.com/zh/model-studio/qwe
 
 Prometheus 中文手册（非官方翻译）：https://hulining.gitbook.io/prometheus/
 
-Prometheus Handbook（非官方/总结型）：https://github.com/yangchuansheng/prometheus -handbook
+Prometheus Handbook（非官方/总结型）：https://github.com/yangchuansheng/prometheus-handbook
 
 ### 9.4. Docker / Docker Compose
 
