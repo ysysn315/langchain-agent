@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     upload_dir: str = "./uploads"
 
     dashscope_api_key: str | None = None
+    chat_model: str = "qwen-flash"
     embedding_model: str = "text-embedding-v4"
 
     doc_chunk_max_size: int = 800

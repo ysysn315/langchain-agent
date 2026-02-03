@@ -27,7 +27,10 @@ async def upload(file: UploadFile = File(...)) -> ApiResponse:
     try:
         extra = ingest_path(str(dest))
     except Exception as e:
-        extra = {"ingest_status": "failed", "ingested_chunks": 0, "error": str(e)}
+        err = str(e)
+        if len(err) > 500:
+            err = err[:500] + "..."
+        extra = {"ingest_status": "failed", "ingested_chunks": 0, "error": err}
 
     payload = UploadResponse(
         filename=dest.name,
